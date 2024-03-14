@@ -1,0 +1,9 @@
+.antwoorden {
+    width: 50vw;
+    height: 100vh;
+    border: solid black 3px;
+}
+#questionSelector {
+    bottom: 0;
+    position: absolute;
+}
