@@ -18,12 +18,13 @@ body {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: 50vw;
-    height:40%;
+    height: 40%;
 }
 
 .a {
     grid-area: 2 / 2 / 3 / 3;
 }
+
 .a input[type="button"] {
     width: 10vw;
     height: 10vh;
@@ -33,6 +34,7 @@ body {
 .b {
     grid-area: 2 / 3 / 3 / 4;
 }
+
 .b input[type="button"] {
     width: 10vw;
     height: 10vh;
@@ -42,6 +44,7 @@ body {
 .c {
     grid-area: 3 / 2 / 4 / 3;
 }
+
 .c input[type="button"] {
     width: 10vw;
     height: 10vh;
@@ -51,10 +54,18 @@ body {
 .d {
     grid-area: 3 / 3 / 4 / 4;
 }
+
 .d input[type="button"] {
     width: 10vw;
     height: 10vh;
     border-radius: 1vw;
+}
+
+.a input[value],
+.b input[value],
+.c input[value],
+.d input[value] {
+    font-size: 100%;
 }
 
 #questionSelector {
@@ -66,8 +77,10 @@ body {
     text-align: center;
     font-size: 150%;
     border: solid 1px #33A7B7;
-    width: fit-content; /* Adjust the width to fit the content */
-    margin: 0 auto; /* Center the element horizontally */
+    width: fit-content;
+    /* Adjust the width to fit the content */
+    margin: 0 auto;
+    /* Center the element horizontally */
     border-radius: 1vw;
     padding: 1vh;
     margin-top: 1vh;
@@ -78,42 +91,54 @@ body {
     text-align: center;
     font-size: 150%;
     border: solid 1px #33A7B7;
-    width: fit-content; /* Adjust the width to fit the content */
-    margin: 0 auto; /* Center the element horizontally */
+    width: fit-content;
+    /* Adjust the width to fit the content */
+    margin: 0 auto;
+    /* Center the element horizontally */
     border-radius: 1vw;
     padding: 1vh;
     margin-top: 1vh;
 }
+
 #binder {
     text-align: center;
     font-size: 150%;
     border: solid 1px #33A7B7;
-    width: fit-content; /* Adjust the width to fit the content */
-    margin: 0 auto; /* Center the element horizontally */
+    width: fit-content;
+    /* Adjust the width to fit the content */
+    margin: 0 auto;
+    /* Center the element horizontally */
     border-radius: 1vw;
     padding: 1vh;
     margin-top: 1vh;
 }
+
 .previous {
-    grid-area: 4 / 2 / 5 / 3; /* Updated grid area */
+    grid-area: 4 / 2 / 5 / 3;
+    /* Updated grid area */
 }
+
 .previous input[type="button"] {
     width: 10vw;
     height: 10vh;
     border-radius: 1vw;
 }
+
 .next {
-    grid-area: 4 / 3 / 5 / 4; /* Updated grid area */
+    grid-area: 4 / 3 / 5 / 4;
+    /* Updated grid area */
 }
+
 .next input[type="button"] {
     width: 10vw;
     height: 10vh;
     border-radius: 1vw;
 }
+
 .next input[value] {
     font-size: 150%;
 }
+
 .previous input[value] {
     font-size: 150%;
 }
-

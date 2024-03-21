@@ -2,19 +2,19 @@ let currentQuestionIndex = 0;
 let answers = {};
 let score = 0;
 //indicator op welke vraag je zit
-const questions = ["Vraag 1", "Vraag 2", "Vraag 3", "Vraag 4","Vraag5","Vraag6","Vraag7","Vraag8","Vraag9","Vraag10","Vraag11","Vraag12","Vraag13","Vraag14","Vraag15"];
+const questions = ["Vraag 1", "Vraag 2", "Vraag 3", "Vraag 4","Vraag5","Vraag 6","Vraag 7","Vraag 8","Vraag 9","Vraag 10","Vraag 11","Vraag 12","Vraag 13","Vraag 14","Vraag 15"];
 //inhoud van de vragen
 const inhoudv = [
-        "vi1",
-        "vi2",
-        "vi3",
-        "vi4",
-        "vi5",
-        "vi6",
-        "vi7",
-        "vi8",
-        "vi9",
-        "vi10",
+        "Wat is de belangrijkste werkzame stof in ecstasy (XTC)?",
+        "Wat is een veelvoorkomend effect van het gebruik van ecstasy?",
+        "Wat is een potentiële risico van het gebruik van ecstasy?",
+        "Hoe wordt ecstasy meestal geconsumeerd?",
+        "Wat is een ander veelvoorkomend woord voor ecstasy?",
+        "Wat kan het gevolg zijn van langdurig gebruik van ecstasy?",
+        "Wat is de wettelijke status van ecstasy in de meeste landen?",
+        "Vraag: Wat is de typische duur van de effecten van het gebruik van ecstasy?",
+        "Welke van de volgende kan een bijwerking zijn van het gebruik van ecstasy?",
+        "Wat is een ander potentieel risico van het gebruik van ecstasy?",
         "vi11",
         "vi12",
         "vi13",
@@ -22,12 +22,12 @@ const inhoudv = [
         "vi15",
                     ];
 //gebruik \n voor enters </br> werkt niet vanwege dat het een value is die je veranderd
-const Av = ["A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n"]
-const Bv = ["B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n"]
-const Cv = ["C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n"]
-const Dv = ["D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n"]
+const Av = ["A\n THC","A\n Verhoogde energie","A\n Verbeterde stemming","A\n Roken","A\n Wiet","A\n Geheugenverlies","A\n Volledig legaal","A\n 1-2 uur","A\n Verlaagde lichaamstemperatuur","A\n Verhoogd libido","A\n","A\n","A\n","A\n","A\n"]
+const Bv = ["B\n Lyserginezuurdiethylamide\n(LSD)","B\n Slaperigheid","B\n Oververhitting van het lichaam","B\n Injectie","B\nXTC","B\n Verbeterde concentratie","B\n Illegaal","B\n 6-8 uur","B\n Verhoogde bloeddruk","B\n Serotoninesyndroom","B\n","B\n","B\n","B\n","B\n"]
+const Cv = ["C\n MDMA","C\n Verminderde hartslag","C\n Verhoogde bloeddruk","C\n Slikken","C\n Coke","C\nVerminderde angst","C\nAlleen legaal voor medisch gebruik","C\n12-24 uur","C\nVertraagde ademhaling","C\nVerhoogde hydratatie","C\n","C\n","C\n","C\n","C\n"]
+const Dv = ["D\n Heroïne","D\n Verbeterd geheugen","D\nVerhoogde eetlust","D\nSniffen","D\nCrack","D\nSchade aan de hersenen","D\nGereguleerd, maar niet volledig legaal","D\nMeer dan 24 uur","D\nVerhoogde honger","D\nVerhoogde hydratatie","D\n","D\n","D\n","D\n","D\n"]
 //correcte antwoord per vraag
-const ant = ['A','B','C','D'];
+const ant = ['C','A','B','C','B','D','B','B','B','B'];
 const answered = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false","false"]
 
 function updateScore() {
