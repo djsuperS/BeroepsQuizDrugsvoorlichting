@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +9,25 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="antwoorden" id="antwoorden1">
-    <p id="vragen"></p>
-    <p id="inhoudvraag"></p>
-    <input type="button" id="A" value="A" onclick="Answer('A')" onclick="save()">
-    <input type="button" id="B" value="B" onclick="Answer('B')" onclick="save()">
-    <input type="button" id="C" Value="C" onclick="Answer('C')" onclick="save()">
-    <input type="button" id="D" Value="D" onclick="Answer('D')" onclick="save()">
-    <p id="score"></p>
-    <div id="output"></div>
-    <div id="questionSelector">
-    <input type="button" id="previous" value="Vorige" onclick="back()">
-    <input type="button" id="next" value="Volgende" onclick="next()">
+        <p id="vragen"></p>
+        <p id="inhoudvraag"></p>
+        <div id="abcd">
+            <div class="a"><input type="button" id="A" value="A" onclick="Answer('A')" onclick="save()"></div>
+            <div class="b"><input type="button" id="B" value="B" onclick="Answer('B')" onclick="save()"></div>
+            <div class="c"><input type="button" id="C" Value="C" onclick="Answer('C')" onclick="save()"></div>
+            <div class="d"><input type="button" id="D" Value="D" onclick="Answer('D')" onclick="save()"></div>
+        </div>
+        <div id="binder">
+        <p id="score"><p>
+        <p id="output"></p>
+        
+        <div class="previous"><input type="button" id="previous" value="<" onclick="back()"></div>
+        <div class="next"><input type="button" id="next" value=">" onclick="next()"></div>
     </div>
     </div>
-    </body>
+</body>
 </body>
 </html>

@@ -31,7 +31,7 @@ const ant = ['A','B','C','D'];
 const answered = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false","false"]
 
 function updateScore() {
-    document.getElementById('score').innerHTML = score; 
+    document.getElementById('score').innerHTML = "<p>score</p>" + score; 
 }
 setInterval(updateScore, 100);
 
