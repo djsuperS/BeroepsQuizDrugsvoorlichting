@@ -25,7 +25,7 @@ body
 {
   text-decoration: none;
   color: #232323;
-  
+    
   transition: color 0.3s ease;
 }
 
@@ -87,7 +87,7 @@ body
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #ffffff;
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3)

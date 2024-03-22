@@ -7,8 +7,8 @@ const questions = ["Vraag 1", "Vraag 2", "Vraag 3", "Vraag 4","Vraag5","Vraag6",
 const inhoudv = [
         "Wat is de belangrijkste psychoactieve stof in marihuana?",
         "Wat is een veelvoorkomend effect van het consumeren van marihuana?",
-        "Wat is een veelvoorkomend effect van het consumeren van marihuana?",
-        "Wat is een veelvoorkomend effect van het consumeren van marihuana?",
+        "Welk deel van de marihuanaplant bevat de meeste THC?",
+        "Wat is een veelvoorkomende methode om marihuana te consumeren??",
         "Welke van de volgende is een mogelijke bijwerking van het gebruik van marihuana?",
         "Wat is de wettelijke status van marihuana in sommige landen?",
         "Wat zijn de voornaamste componenten van de marihuanaplant?",
@@ -22,12 +22,12 @@ const inhoudv = [
         "vi15",
                     ];
 //gebruik \n voor enters </br> werkt niet vanwege dat het een value is die je veranderd
-const Av = ["A\nTHC","A\nSlaperigheid","A\nBladeren","A\nInjectie","A\nVerhoogde alertheid","A\nVerhoogde energie","A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n","A\n"]
-const Bv = ["B\nCBD","B\Verhoogde eetlust","B\Bloemen (toppen)","B\nRoken","B\nVerminderde hartslag","B\nIllegaa","B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n","B\n"]
-const Cv = ["C\nCafeïne","C\nVerbeterd geheugen","C\nStengels","C\nSnuiven","C\nAngstgevoelens","C\nAlleen legaal voor medisch gebruik","C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n","C\n"]
-const Dv = ["D\nNicotine","D\nVerhoogde concentratie","D\nWortels","D\nInname via ogen","D\nVerhoogde energie","D\nGereguleerd, maar niet volledig legaal","D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n","D\n"]
+const Av = ["A\nTHC","A\nSlaperigheid","A\nBladeren","A\nInjectie","A\nVerhoogde alertheid","A\nVolledig legaal","A\nBladeren en wortels","A\nHasj","A\nTHC","A\n1-2 uur","A\n","A\n","A\n","A\n","A\n"]
+const Bv = ["B\nCBD","B\nVerhoogde eetlust","B\nBloemen (toppen)","B\nRoken","B\nVerminderde hartslag","B\nIllegaal","B\nZaden en stengels","B\nLSD","B\nCBD","B\n6-8 uur","B\n","B\n","B\n","B\n","B\n"]
+const Cv = ["C\nCafeïne","C\nVerbeterd geheugen","C\nStengels","C\nSnuiven","C\nAngstgevoelens","C\nAlleen legaal voor\nmedisch gebruik","C\nToppen en bladeren","C\nXTC","C\nNicotine","C\n12-24 uur","C\n","C\n","C\n","C\n","C\n"]
+const Dv = ["D\nNicotine","D\nVerhoogde concentratie","D\nWortels","D\nInname via ogen","D\nVerhoogde energie","D\nGereguleerd, maar niet volledig\nlegaal","D\nBloemen en zaden","D\nWiet","D\nCocaïne","D\nMeer dan 24 uur","D\n","D\n","D\n","D\n","D\n"]
 //correcte antwoord per vraag
-const ant = ['A','B','B','B','C','C'];
+const ant = ['A','B','B','B','C','C','C','D','B','A'];
 const answered = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false","false"]
 
 function updateScore() {
