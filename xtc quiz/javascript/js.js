@@ -1,5 +1,4 @@
 let currentQuestionIndex = 0;
-let answers = {};
 let score = 0;
 //indicator op welke vraag je zit
 const questions = ["Vraag 1", "Vraag 2", "Vraag 3", "Vraag 4","Vraag5","Vraag 6","Vraag 7","Vraag 8","Vraag 9","Vraag 10","Vraag 11","Vraag 12","Vraag 13","Vraag 14","Vraag 15"];
@@ -29,9 +28,17 @@ const Dv = ["D\n Heroïne","D\n Verbeterd geheugen","D\nVerhoogde eetlust","D\nS
 //correcte antwoord per vraag
 const ant = ['C','A','B','C','B','D','B','B','B','B'];
 const answered = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false","false"]
+document.getElementById('Check').style.visibility = 'hidden';
+document.getElementById('fout').style.visibility = 'hidden';
+document.getElementById('goed').style.visibility = 'hidden';
+document.getElementById('tekst').style.visibility = 'hidden';
+
+
+
 
 function updateScore() {
     document.getElementById('score').innerHTML = "<p>score</p>" + score; 
+
 }
 setInterval(updateScore, 100);
 
@@ -42,7 +49,7 @@ function Answer(selectedOption) {
     //checkt of de vraag al is beantwoord
     if (answered[currentQuestionIndex] === true) {
         document.getElementById('output').innerHTML = "<p>U heeft deze vraag al beantwoord u kunt hier geen punten meer voor krijgen</p>";
-        } else {
+        } else
             //checkt of de vraag correct is
         if (selectedOption === ant[currentQuestionIndex]){
             answered[currentQuestionIndex] = true;
@@ -53,23 +60,47 @@ function Answer(selectedOption) {
         document.getElementById('output').innerHTML = "<p>Jammer dat is incorrect</p>";
 }
 }
-}
+
 //volgende vraag knop
 function next() {
+
+
     document.getElementById('output').innerHTML = "";
-    if (currentQuestionIndex >= questions.length){
-    } else {
-    currentQuestionIndex++;
-    showQuestion(currentQuestionIndex);
+    if (currentQuestionIndex < questions.length) {
+        currentQuestionIndex++;
+        showQuestion(currentQuestionIndex);
+    } if (currentQuestionIndex >= 10 ) {
+        document.getElementById('A').style.visibility = 'hidden';
+        document.getElementById('B').style.visibility = 'hidden';
+        document.getElementById('C').style.visibility = 'hidden';
+        document.getElementById('D').style.visibility = 'hidden';
+
+        document.getElementById('Check').style.visibility = 'visible';
+        document.getElementById('fout').style.visibility = 'visible';
+        document.getElementById('goed').style.visibility = 'visible';
+        document.getElementById('tekst').style.visibility = 'visible';
     }
 }
+
 //vorige vraag knop
 function back() {
+
     document.getElementById('output').innerHTML = "";
     if (currentQuestionIndex <= 0){
     } else {
     currentQuestionIndex--;
     showQuestion(currentQuestionIndex);
+    }
+    if (currentQuestionIndex < 10) {
+        document.getElementById('A').style.visibility = 'visible';
+        document.getElementById('B').style.visibility = 'visible';
+        document.getElementById('C').style.visibility = 'visible';
+        document.getElementById('D').style.visibility = 'visible';
+
+        document.getElementById('Check').style.visibility = 'hidden';
+        document.getElementById('fout').style.visibility = 'hidden';
+        document.getElementById('goed').style.visibility = 'hidden';
+        document.getElementById('tekst').style.visibility = 'hidden';
     }
 
 }
