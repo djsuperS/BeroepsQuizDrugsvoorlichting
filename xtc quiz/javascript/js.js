@@ -15,11 +15,11 @@ const inhoudv = [
         "Vraag: Wat is de typische duur van de effecten van het gebruik van ecstasy?",
         "Welke van de volgende kan een bijwerking zijn van het gebruik van ecstasy?",
         "Wat is een ander potentieel risico van het gebruik van ecstasy?",
-        "vi11",
-        "vi12",
-        "vi13",
-        "vi14",
-        "vi15",
+        "Hoe beïnvloedt ecstasy de chemische processen in de hersenen?",
+        "Wat zijn de verschillende factoren die van invloed zijn op de intensiteit van de effecten van ecstasy bij individuen?",
+        "Kun je de neurologische mechanismen achter de 'euforische' effecten van ecstasy uitleggen?",
+        "Wat zijn enkele van de mogelijke langetermijneffecten van herhaaldelijk gebruik van ecstasy op de mentale gezondheid?",
+        "Kun je beschrijven hoe ecstasy de waarneming van tijd en ruimte kan verstoren, en wat dit betekent voor de gebruiker?",
                     ];
 //gebruik \n voor enters </br> werkt niet vanwege dat het een value is die je veranderd
 const Av = ["A\n THC","A\n Verhoogde energie","A\n Verbeterde stemming","A\n Roken","A\n Wiet","A\n Geheugenverlies","A\n Volledig legaal","A\n 1-2 uur","A\n Verlaagde lichaamstemperatuur","A\n Verhoogd libido","A\n","A\n","A\n","A\n","A\n"]
@@ -29,6 +29,11 @@ const Dv = ["D\n Heroïne","D\n Verbeterd geheugen","D\nVerhoogde eetlust","D\nS
 //correcte antwoord per vraag
 const ant = ['C','A','B','C','B','D','B','B','B','B'];
 const answered = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false","false"]
+document.getElementById('check').style.visibility = 'hidden';
+document.getElementById('goed').style.visibility = 'hidden';
+document.getElementById('fout').style.visibility = 'hidden';
+document.getElementById('klaar').style.visibility = 'hidden';
+
 
 function updateScore() {
     document.getElementById('score').innerHTML = "<p>score</p>" + score; 
@@ -43,7 +48,6 @@ function Answer(selectedOption) {
     if (answered[currentQuestionIndex] === true) {
         document.getElementById('output').innerHTML = "<p>U heeft deze vraag al beantwoord u kunt hier geen punten meer voor krijgen</p>";
         } else {
-            //checkt of de vraag correct is
         if (selectedOption === ant[currentQuestionIndex]){
             answered[currentQuestionIndex] = true;
             console.log(answered[currentQuestionIndex])
@@ -54,8 +58,18 @@ function Answer(selectedOption) {
 }
 }
 }
+function check(){
+    document.getElementById('check').style.visibility = 'hidden';
+    document.getElementById('goed').style.visibility = 'visible';
+    document.getElementById('fout').style.visibility = 'visible';
+}
+
+
 //volgende vraag knop
 function next() {
+    document.getElementById('check').style.visibility = 'hidden';
+    document.getElementById('goed').style.visibility = 'hidden';
+    document.getElementById('fout').style.visibility = 'hidden';
     document.getElementById('output').innerHTML = "";
     if (currentQuestionIndex >= questions.length){
     } else {
@@ -65,6 +79,9 @@ function next() {
 }
 //vorige vraag knop
 function back() {
+    document.getElementById('check').style.visibility = 'hidden';
+    document.getElementById('goed').style.visibility = 'hidden';
+    document.getElementById('fout').style.visibility = 'hidden';
     document.getElementById('output').innerHTML = "";
     if (currentQuestionIndex <= 0){
     } else {
@@ -75,14 +92,37 @@ function back() {
 }
 //update de vraag,vraaginhoud,antwoorden
 function showQuestion(index) {
-    if (index >= 0 && index < questions.length) {
+    if (currentQuestionIndex === 16) {
+        document.getElementById('antwoorden1').style.visibility = 'hidden';
+    }
+    if (currentQuestionIndex >= 10) {
+        document.getElementById('vragen').innerHTML = questions[index];
+        document.getElementById('inhoudvraag').innerHTML = inhoudv[index];
+        document.getElementById('A').style.visibility = 'hidden';
+        document.getElementById('B').style.visibility = 'hidden';
+        document.getElementById('C').style.visibility = 'hidden';
+        document.getElementById('D').style.visibility = 'hidden';
+        document.getElementById('openv').style.visibility = 'visible';
+        document.getElementById('check').style.visibility = 'visible';
+
+
+
+    }else if (index >= 0 && index < questions.length) {
         document.getElementById('vragen').innerHTML = questions[index];
         document.getElementById('inhoudvraag').innerHTML = inhoudv[index];
         document.getElementById('A').value = Av[index];
         document.getElementById('B').value = Bv[index];
         document.getElementById('C').value = Cv[index];
         document.getElementById('D').value = Dv[index];
-   { if (index >= 0 && index < questions.length) {
+        document.getElementById('A').style.visibility = 'visible';
+        document.getElementById('B').style.visibility = 'visible';
+        document.getElementById('C').style.visibility = 'visible';
+        document.getElementById('D').style.visibility = 'visible';
+        document.getElementById('openv').style.visibility = 'hidden';
+
+
+
+        { if (index >= 0 && index < questions.length) {
             document.getElementById('vragen').innerHTML = questions[index];
             document.getElementById('inhoudvraag').innerHTML = inhoudv[index];
             }

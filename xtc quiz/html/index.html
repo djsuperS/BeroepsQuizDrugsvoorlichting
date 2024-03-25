@@ -19,15 +19,23 @@
             <div class="b"><input type="button" id="B" value="B" onclick="Answer('B')" onclick="save()"></div>
             <div class="c"><input type="button" id="C" Value="C" onclick="Answer('C')" onclick="save()"></div>
             <div class="d"><input type="button" id="D" Value="D" onclick="Answer('D')" onclick="save()"></div>
+            <div class="opc">
+            <div class="openv"><input type="text" id="openv" value=""></div>
+                <div class="buttons">
+                    <div class="fout"><input type="button" id="fout" value="fout" onclick="fout()"></div>
+                    <div class="check"><input type="button" id="check" value="Kijk na" onclick="check()"></div>
+                    <div class="goed"><input type="button" id="goed" value="goed" onclick="goed()"></div>
+                </div>
+            </div>
         </div>
         <div id="binder">
         <p id="score"><p>
         <p id="output"></p>
-        
         <div class="previous"><input type="button" id="previous" value="<" onclick="back()"></div>
         <div class="next"><input type="button" id="next" value=">" onclick="next()"></div>
     </div>
     </div>
+    <input type="button" id="klaar" value="je zeker dat je klaar bent met de quiz?">
 </body>
 </body>
 </html>
