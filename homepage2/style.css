@@ -12,6 +12,9 @@ body {
   height: 2000px;
   /* Just for demonstration, replace with your content */
 }
+a {
+  text-decoration: none;
+}
 
 #menuToggle {
   display: block;
