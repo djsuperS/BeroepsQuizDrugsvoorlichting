@@ -1,121 +1,36 @@
 body {
-    background-color: #33A7B7;
+    margin: 0;
+    padding: 0;
+    background: #252323;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
     overflow: hidden;
-}
+  }  
 
-.antwoorden {
-    width: 50vw;
-    height: 98vh;
-    border: solid black 3px;
-    border-radius: 1Vh;
-    background-color: white;
-}
-
-#abcd {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 50vw;
-    height:40%;
-}
-
-.a {
-    grid-area: 2 / 2 / 3 / 3;
-}
-.a input[type="button"] {
-    width: 10vw;
-    height: 10vh;
-    border-radius: 1vw;
-}
-
-.b {
-    grid-area: 2 / 3 / 3 / 4;
-}
-.b input[type="button"] {
-    width: 10vw;
-    height: 10vh;
-    border-radius: 1vw;
-}
-
-.c {
-    grid-area: 3 / 2 / 4 / 3;
-}
-.c input[type="button"] {
-    width: 10vw;
-    height: 10vh;
-    border-radius: 1vw;
-}
-
-.d {
-    grid-area: 3 / 3 / 4 / 4;
-}
-.d input[type="button"] {
-    width: 10vw;
-    height: 10vh;
-    border-radius: 1vw;
-}
-
-#questionSelector {
-    bottom: 0;
-    position: absolute;
-}
-
-#vragen {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 10%; 
+  }
+  
+  .person {
+    width: 30%; 
+    background-color: #ededed;
+    padding: 20px;
     text-align: center;
-    font-size: 150%;
-    border: solid 1px #33A7B7;
-    width: fit-content; /* Adjust the width to fit the content */
-    margin: 0 auto; /* Center the element horizontally */
-    border-radius: 1vw;
-    padding: 1vh;
-    margin-top: 1vh;
-}
-
-
-#inhoudvraag {
-    text-align: center;
-    font-size: 150%;
-    border: solid 1px #33A7B7;
-    width: fit-content; /* Adjust the width to fit the content */
-    margin: 0 auto; /* Center the element horizontally */
-    border-radius: 1vw;
-    padding: 1vh;
-    margin-top: 1vh;
-}
-#binder {
-    text-align: center;
-    font-size: 150%;
-    border: solid 1px #33A7B7;
-    width: fit-content; /* Adjust the width to fit the content */
-    margin: 0 auto; /* Center the element horizontally */
-    border-radius: 1vw;
-    padding: 1vh;
-    margin-top: 1vh;
-}
-.previous {
-    grid-area: 4 / 2 / 5 / 3; /* Updated grid area */
-}
-.previous input[type="button"] {
-    width: 10vw;
-    height: 10vh;
-    border-radius: 1vw;
-}
-.next {
-    grid-area: 4 / 3 / 5 / 4; /* Updated grid area */
-}
-.next input[type="button"] {
-    width: 10vw;
-    height: 10vh;
-    border-radius: 1vw;
-}
-.next input[value] {
-    font-size: 150%;
-}
-.previous input[value] {
-    font-size: 150%;
-}
+  }
+  
+  .person img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .person h2 {
+    margin-bottom: 10px;
+  }
 
 #menuToggle {
     display: block;
@@ -129,9 +44,6 @@ body {
     -webkit-user-select: none;
     user-select: none;
   }
-  
-  /* Rest of your styling for #menuToggle and #menu remains the same */
-  
   
   #menuToggle a {
     text-decoration: none;
@@ -222,4 +134,3 @@ body {
   #menuToggle input:checked~ul {
     transform: none;
   }
-
