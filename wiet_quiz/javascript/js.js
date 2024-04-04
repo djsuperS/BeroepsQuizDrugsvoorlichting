@@ -90,3 +90,14 @@ function showQuestion(index) {
     }
 }
 showQuestion(currentQuestionIndex);
+
+
+function changeSize(size) {
+    var plantImage = document.getElementById('plant');
+    if (size === 'small') {
+        plantImage.style.height = '500px';
+    } else if (size === 'large') {
+        plantImage.style.height ='700px';
+    }
+}
+

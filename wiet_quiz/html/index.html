@@ -2,55 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../javascript/js.js" defer></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../javascript/js.js" defer></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
 </head>
 
 <body>
-    <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="/homepage2/index.html">
-              <li>Home</li>
-            </a>
-            <a href="/about_us/index.html">
-              <li>About us</li>
-            </a>
-            <a href="#">
-              <li>Contact</li>
-            </a>
-            <a href="#" target="_blank">
-              <li>Leaderboard</li>
-            </a>
-          </ul>
-        </div>
-      </nav>
-    <div class="antwoorden" id="antwoorden1">
-        <p id="vragen"></p>
-        <p id="inhoudvraag"></p>
-        <div id="abcd">
-            <div class="a"><input type="button" id="A" value="A" onclick="Answer('A')" onclick="save()"></div>
-            <div class="b"><input type="button" id="B" value="B" onclick="Answer('B')" onclick="save()"></div>
-            <div class="c"><input type="button" id="C" Value="C" onclick="Answer('C')" onclick="save()"></div>
-            <div class="d"><input type="button" id="D" Value="D" onclick="Answer('D')" onclick="save()"></div>
-        </div>
-        <div id="binder">
-        <p id="score"><p>
-        <p id="output"></p>
-        
-        <div class="previous"><input type="button" id="previous" value="<" onclick="back()"></div>
-        <div class="next"><input type="button" id="next" value=">" onclick="next()"></div>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <a href="/homepage2/index.html">
+          <li>Home</li>
+        </a>
+        <a href="/about_us/index.html">
+          <li>About us</li>
+        </a>
+        <a href="#">
+          <li>Contact</li>
+        </a>
+      </ul>
     </div>
+  </nav>
+  <div class="antwoorden" id="antwoorden1">
+    <p id="vragen"></p>
+    <p id="inhoudvraag"></p>
+    <div id="abcd">
+      <div class="a"><input type="button" id="A" value="A" onclick="Answer('A')" onclick="save()"></div>
+      <div class="b"><input type="button" id="B" value="B" onclick="Answer('B')" onclick="save()"></div>
+      <div class="c"><input type="button" id="C" Value="C" onclick="Answer('C')" onclick="save()"></div>
+      <div class="d"><input type="button" id="D" Value="D" onclick="Answer('D')" onclick="save()"></div>
     </div>
+    <div id="binder">
+      <p id="score">
+      <p>
+      <p id="output"></p>
+
+      <div class="previous"><input type="button" id="previous" value="<" onclick="back()"></div>
+      <div class="next"><input type="button" id="next" value=">" onclick="next()"></div>
+    </div>
+  </div>  
+  <img src="/wiet_quiz/images/image-removebg-preview (3).png" width="1000px" height="1000px" id="plant">
+  <img src="/wiet_quiz/images/image-removebg-preview (1).png" alt="" srcset="" id="schaar"
+    onclick="changeSize('small')">
+  <img src="/wiet_quiz/images/image-removebg-preview (2).png" alt="" srcset="" id="gieter"
+    onclick="changeSize('large')">
+
 </body>
-</body>
+
 </html>
