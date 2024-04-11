@@ -15,11 +15,11 @@ const inhoudv = [
         "Vraag: Wat is de typische duur van de effecten van het gebruik van ecstasy?",
         "Welke van de volgende kan een bijwerking zijn van het gebruik van ecstasy?",
         "Wat is een ander potentieel risico van het gebruik van ecstasy?",
-        "vi11",
-        "vi12",
-        "vi13",
-        "vi14",
-        "vi15",
+        "Wat zijn enkele mogelijke oorzaken van de crash die sommige mensen ervaren na het gebruik van XTC, en hoe kan dit worden geminimaliseerd?",
+        "Hoe kan het gebruik van XTC de serotoninespiegels in de hersenen beïnvloeden, en wat zijn de mogelijke gevolgen hiervan op de stemming en het gedrag van een persoon?",
+        "Wat zijn de belangrijkste verschillen tussen de effecten van XTC en die van andere stimulerende middelen, zoals cocaïne of amfetaminen?",
+        "Hoe kan het gebruik van XTC leiden tot uitdroging en oververhitting, en welke voorzorgsmaatregelen kunnen worden genomen om deze risico's te verminderen tijdens het gebruik?",
+        "Hoe kan XTC-gebruik sociale en relationele aspecten van iemands leven beïnvloeden, zowel op korte als op lange termijn?",
                     ];
 //gebruik \n voor enters </br> werkt niet vanwege dat het een value is die je veranderd
 const Av = ["A\n THC","A\n Verhoogde energie","A\n Verbeterde stemming","A\n Roken","A\n Wiet","A\n Geheugenverlies","A\n Volledig legaal","A\n 1-2 uur","A\n Verlaagde lichaamstemperatuur","A\n Verhoogd libido"]
@@ -28,7 +28,7 @@ const Cv = ["C\n MDMA","C\n Verminderde hartslag","C\n Verhoogde bloeddruk","C\n
 const Dv = ["D\n Heroïne","D\n Verbeterd geheugen","D\nVerhoogde eetlust","D\nSniffen","D\nCrack","D\nSchade aan de hersenen","D\nGereguleerd, maar niet volledig legaal","D\nMeer dan 24 uur","D\nVerhoogde honger","D\nVerhoogde hydratatie"]
 //correcte antwoord per vraag
 const ant = ['C','A','B','C','B','D','B','B','B','B'];
-const oant = ["ant1",'ant2','ant3','ant4','ant5']
+const oant = ["Een crash kan optreden door serotonine-uitputting, resulterend in vermoeidheid en prikkelbaarheid. Het kan worden verminderd door gezond eten, hydratatie en rust.",'XTC verhoogt de serotonine in de hersenen, wat geluk, empathie en energie kan veroorzaken, maar op lange termijn kan leiden tot stemmingsstoornissen.','XTC veroorzaakt empathie en openheid, in tegenstelling tot de intense euforie van cocaïne of amfetaminen.','XTC kan uitdroging en oververhitting veroorzaken door verhoogde lichaamstemperatuur en energieverbruik. Dit kan worden verminderd door matig water drinken, regelmatig afkoelen en het vermijden van overmatige fysieke inspanning.','Kortetermijngebruik kan sociale binding versterken, maar op lange termijn kan het problemen in relaties veroorzaken door stemmingsstoornissen en verstoring van sociale en emotionele functies.']
 const answered = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false","false"]
 document.getElementById('Check').style.visibility = 'hidden';
 document.getElementById('fout').style.visibility = 'hidden';
@@ -143,3 +143,14 @@ function showQuestion(index) {
     }
 }
 showQuestion(currentQuestionIndex);
+let pilindex = 1;
+
+function pillenaanpassen(toevoegenofwegnemen) {
+    if (toevoegenofwegnemen === "plus") {
+        pilindex++;
+        document.getElementById("p" + pilindex).style.visibility = 'visible';
+    } else if (toevoegenofwegnemen === "min") {
+        document.getElementById("p" + pilindex).style.visibility = 'hidden';
+        pilindex--;
+    }
+}

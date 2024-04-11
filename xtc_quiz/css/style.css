@@ -249,3 +249,35 @@ body {
   #menuToggle input:checked~ul {
     transform: none;
   }
+  .animatie {
+    position: absolute;
+    right: 0;
+    display: flex;
+    top: 0px;
+    height: 98vh;
+    width: 48vw;
+    border: solid black 3px;
+    border-radius: 1Vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .animatie input {
+    display: flex;
+    width: 10vw;
+    height: 10vw;
+    font-size: 1000%;
+    border-radius: 1vw;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Add this to evenly distribute space between the items */
+    flex-direction: row; /* Ensure the flex items are arranged in a row */
+    width: 100%; /* Ensure the buttons div takes the full width of its container */
+}
+.animatie img {
+  visibility: hidden;
+}
+
