@@ -3,9 +3,17 @@ body {
     overflow: hidden;
 }
 
+.wrapper {
+  display: flex;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
 .antwoorden {
-    width: 50vw;
-    height: 98vh;
+    width: 48vw;
+    height: 96vh;
     border: solid black 3px;
     border-radius: 1Vh;
     background-color: white;
@@ -106,9 +114,7 @@ body {
     font-size: 150%;
     border: solid 1px #33A7B7;
     width: fit-content;
-    /* Adjust the width to fit the content */
     margin: 0 auto;
-    /* Center the element horizontally */
     border-radius: 1vw;
     padding: 1vh;
     margin-top: 1vh;
@@ -116,7 +122,6 @@ body {
 
 .previous {
     grid-area: 4 / 2 / 5 / 3;
-    /* Updated grid area */
 }
 
 .previous input[type="button"] {
@@ -127,7 +132,6 @@ body {
 
 .next {
     grid-area: 4 / 3 / 5 / 4;
-    /* Updated grid area */
 }
 
 .next input[type="button"] {
@@ -147,19 +151,14 @@ body {
 #menuToggle {
     display: block;
     position: fixed;
-    /* Fix the menuToggle to the viewport */
     top: 20px;
-    /* Adjust as needed */
-    right: 0px;
-    /* Adjust as needed */
+    right: 1vw;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
   }
   
-  /* Rest of your styling for #menuToggle and #menu remains the same */
-  
-  
+
   #menuToggle a {
     text-decoration: none;
     color: #232323;
@@ -180,9 +179,7 @@ body {
     left: -5px;
     cursor: pointer;
     opacity: 0;
-    /* hide this */
     z-index: 2;
-    /* and place it over the hamburger */
     -webkit-touch-callout: none;
   }
   
@@ -225,11 +222,11 @@ body {
   }
   
   #menu {
-    right: 0;
+    right: -1vw;
     position: absolute;
     width: 300px;
     margin: 50px 0 0 -50px;
-    /* Veranderde -100px naar 50px */
+
     padding: 50px;
     padding-top: 125px;
     background: #ededed;
@@ -248,4 +245,50 @@ body {
   /* And let's slide it in from the left */
   #menuToggle input:checked~ul {
     transform: none;
+<<<<<<< Updated upstream
   }
+=======
+  }
+  .animatie {
+    position: absolute;
+    right: 1vw;
+    display: flex;
+    top: 1vw;
+    height: 96vh;
+    width: 48vw;
+    border: solid black 3px;
+    border-radius: 1Vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .animatie input {
+    display: flex;
+    width: 10vw;
+    height: 10vw;
+    font-size: 1000%;
+    border-radius: 1vw;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Add this to evenly distribute space between the items */
+    flex-direction: row; /* Ensure the flex items are arranged in a row */
+    width: 100%; /* Ensure the buttons div takes the full width of its container */
+}
+.animatie img {
+  visibility: hidden;
+  width: 5vw;
+  height: fit-content;
+  padding: 2vw;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.vornext {
+  display: flex;
+}
+>>>>>>> Stashed changes
