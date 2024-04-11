@@ -180,11 +180,18 @@ a {
   height: 33vw;
   width: 70vw;
   margin-left: 15vw;
-  margin-top: 18vh;
+  margin-top: 14vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 15px rgb(0, 0, 0);
   padding: 40px;
+}
+
+#logo{
+width: 8%;
+height: 2%  ;
+margin-left: 45%;
+margin-top: 2%;
 }

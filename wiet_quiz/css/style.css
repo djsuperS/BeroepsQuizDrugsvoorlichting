@@ -251,32 +251,12 @@ body {
   position: absolute;
   top: 20%;
   right: 9%;
-  width: 600px;
   /* Adjust width as needed */
-  height: auto;
   /* Maintain aspect ratio */
   transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
   /* Transities voor breedte, hoogte en ondoorzichtigheid */
   opacity: 1;
   /* Zorg ervoor dat de plant zichtbaar is in het begin */
-}
-
-#plant.small {
-  width: 500px;
-  /* Breedte voor de kleine grootte */
-  height: auto;
-  /* Hoogte wordt automatisch aangepast om de aspectverhouding te behouden */
-  opacity: 0;
-  /* Verberg de plant bij het verkleinen */
-}
-
-#plant.large {
-  width: 700px;
-  /* Breedte voor de grote grootte */
-  height: auto;
-  /* Hoogte wordt automatisch aangepast om de aspectverhouding te behouden */
-  opacity: 1;
-  /* Toon de plant bij het vergroten */
 }
 
 #schaar,
@@ -300,3 +280,11 @@ body {
 #schaar {
   right: 12%;
 }
+
+
+#plant {
+  position: absolute; /* Absolute positionering ten opzichte van de container */
+  top: 20%; /* Aanpassen indien nodig */
+  right: 9%; /* Aanpassen indien nodig */
+  /* Andere CSS-stijlen blijven hetzelfde */
+} 

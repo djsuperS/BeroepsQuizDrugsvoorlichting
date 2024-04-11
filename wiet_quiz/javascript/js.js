@@ -1,3 +1,4 @@
+let plantSize = 600;
 let currentQuestionIndex = 0;
 let answers = {};
 let score = 0;
@@ -29,6 +30,15 @@ const Dv = ["D\nNicotine","D\nVerhoogde concentratie","D\nWortels","D\nInname vi
 //correcte antwoord per vraag
 const ant = ['A','B','B','B','C','C','C','D','B','A'];
 const answered = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false","false"]
+
+
+let plantImage = document.getElementById('plant');
+plantImage.setAttribute("style", "width:"+plantSize+"px");
+plantImage.setAttribute("style", "height:"+plantSize+"px");
+
+
+
+
 
 function updateScore() {
     document.getElementById('score').innerHTML = "<p>score</p>" + score; 
@@ -92,12 +102,28 @@ function showQuestion(index) {
 showQuestion(currentQuestionIndex);
 
 
-function changeSize(size) {
+
+function changeSize(action) {
     var plantImage = document.getElementById('plant');
-    if (size === 'small') {
-        plantImage.style.height = '500px';
-    } else if (size === 'large') {
-        plantImage.style.height ='700px';
+    var currentWidth = parseInt(plantImage.style.width);
+    console.log(plantImage.style.width);
+    var currentHeight = parseInt(plantImage.style.height);
+    var newWidth, newHeight;
+
+    if (action === 'schaar') {
+        newWidth = currentWidth - 20;
+        newHeight = currentHeight - 20;
+    } else if (action === 'gieter') {
+        newWidth = currentWidth + 20;
+        newHeight = currentHeight + 20;
     }
+
+    plantImage.style.width = newWidth + 'px';
+    plantImage.style.height = newHeight + 'px';
 }
+
+document.getElementById('schaar').onclick = function() { changeSize('schaar'); };
+document.getElementById('gieter').onclick = function() { changeSize('gieter'); };
+
+
 
