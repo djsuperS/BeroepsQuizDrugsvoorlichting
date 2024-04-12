@@ -25,7 +25,7 @@
         <a href="/about_us/index.html">
           <li>About us</li>
         </a>
-        <a href="#">
+        <a href="/contact page/index.html">
           <li>Contact</li>
         </a>
       </ul>
@@ -40,6 +40,10 @@
       <div class="c"><input type="button" id="C" Value="C" onclick="Answer('C')" onclick="save()"></div>
       <div class="d"><input type="button" id="D" Value="D" onclick="Answer('D')" onclick="save()"></div>
     </div>
+    <div class="tekst"><input type="text" id="tekst"></div>
+    <div class="Check"><input type="button" id="Check" Value="Kijk na" onclick="check()"></div>
+    <div class="goed"><input type="button" id="goed" Value="Goed" onclick="goed()"></div>
+    <div class="fout"><input type="button" id="fout" Value="Fout" onclick="fout()"></div>
     <div id="binder">
       <p id="score">
       <p>
@@ -48,14 +52,11 @@
       <div class="previous"><input type="button" id="previous" value="<" onclick="back()"></div>
       <div class="next"><input type="button" id="next" value=">" onclick="next()"></div>
     </div>
-  </div>  
+  </div>
   <img src="/wiet_quiz/images/image-removebg-preview (3).png" id="plant">
-  <img src="/wiet_quiz/images/image-removebg-preview (1).png" alt="" srcset="" id="schaar"
-    onclick="changeplant(false)">
-  <img src="/wiet_quiz/images/image-removebg-preview (2).png" alt="" srcset="" id="gieter"
-    onclick="changeplant(true)">
+  <img src="/wiet_quiz/images/image-removebg-preview (1).png" alt="" srcset="" id="schaar" onclick="changeplant(false)">
+  <img src="/wiet_quiz/images/image-removebg-preview (2).png" alt="" srcset="" id="gieter" onclick="changeplant(true)">
 
 </body>
 
 </html>
-
