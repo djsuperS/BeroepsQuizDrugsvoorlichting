@@ -206,4 +206,4 @@ textarea.ng-valid {
 /* And let's slide it in from the left */
 #menuToggle input:checked~ul {
   transform: none;
-}s
+}
