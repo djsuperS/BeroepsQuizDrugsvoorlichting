@@ -245,9 +245,6 @@ body {
   /* And let's slide it in from the left */
   #menuToggle input:checked~ul {
     transform: none;
-<<<<<<< Updated upstream
-  }
-=======
   }
   .animatie {
     position: absolute;
@@ -291,4 +288,3 @@ body {
 .vornext {
   display: flex;
 }
->>>>>>> Stashed changes

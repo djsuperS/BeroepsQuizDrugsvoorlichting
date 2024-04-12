@@ -1,13 +1,15 @@
 let currentQuestionIndex = 0;
 let score = 0;
 let openvc = 0;
-//indicator op welke vraag je zit
+let pilindex = 0;
+
+// Define arrays for questions, contents, answers, and more
 const questions = [
   "Vraag 1",
   "Vraag 2",
   "Vraag 3",
   "Vraag 4",
-  "Vraag5",
+  "Vraag 5",
   "Vraag 6",
   "Vraag 7",
   "Vraag 8",
@@ -19,26 +21,9 @@ const questions = [
   "Vraag 14",
   "Vraag 15",
 ];
+
 //inhoud van de vragen
 const inhoudv = [
-<<<<<<< Updated upstream
-        "Wat is de belangrijkste werkzame stof in ecstasy (XTC)?",
-        "Wat is een veelvoorkomend effect van het gebruik van ecstasy?",
-        "Wat is een potentiële risico van het gebruik van ecstasy?",
-        "Hoe wordt ecstasy meestal geconsumeerd?",
-        "Wat is een ander veelvoorkomend woord voor ecstasy?",
-        "Wat kan het gevolg zijn van langdurig gebruik van ecstasy?",
-        "Wat is de wettelijke status van ecstasy in de meeste landen?",
-        "Vraag: Wat is de typische duur van de effecten van het gebruik van ecstasy?",
-        "Welke van de volgende kan een bijwerking zijn van het gebruik van ecstasy?",
-        "Wat is een ander potentieel risico van het gebruik van ecstasy?",
-        "vi11",
-        "vi12",
-        "vi13",
-        "vi14",
-        "vi15",
-                    ];
-=======
   "Wat is de belangrijkste werkzame stof in ecstasy (XTC)?",
   "Wat is een veelvoorkomend effect van het gebruik van ecstasy?",
   "Wat is een potentiële risico van het gebruik van ecstasy?",
@@ -55,8 +40,7 @@ const inhoudv = [
   "Hoe kan het gebruik van XTC leiden tot uitdroging en oververhitting, en welke voorzorgsmaatregelen kunnen worden genomen om deze risico's te verminderen tijdens het gebruik?",
   "Hoe kan XTC-gebruik sociale en relationele aspecten van iemands leven beïnvloeden, zowel op korte als op lange termijn?",
 ];
->>>>>>> Stashed changes
-//gebruik \n voor enters </br> werkt niet vanwege dat het een value is die je veranderd
+
 const Av = [
   "A\n THC",
   "A\n Verhoogde energie",
@@ -69,6 +53,7 @@ const Av = [
   "A\n Verlaagde lichaamstemperatuur",
   "A\n Verhoogd libido",
 ];
+
 const Bv = [
   "B\n Lyserginezuurdiethylamide\n(LSD)",
   "B\n Slaperigheid",
@@ -81,6 +66,7 @@ const Bv = [
   "B\n Verhoogde bloeddruk",
   "B\n Serotoninesyndroom",
 ];
+
 const Cv = [
   "C\n MDMA",
   "C\n Verminderde hartslag",
@@ -93,6 +79,7 @@ const Cv = [
   "C\nVertraagde ademhaling",
   "C\nVerhoogde hydratatie",
 ];
+
 const Dv = [
   "D\n Heroïne",
   "D\n Verbeterd geheugen",
@@ -105,20 +92,9 @@ const Dv = [
   "D\nVerhoogde honger",
   "D\nVerlaagde hydratatie",
 ];
-//correcte antwoord per vraag
-<<<<<<< Updated upstream
-const ant = ['C','A','B','C','B','D','B','B','B','B'];
-const oant = ["ant1",'ant2','ant3','ant4','ant5']
-const answered = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false","false"]
-document.getElementById('Check').style.visibility = 'hidden';
-document.getElementById('fout').style.visibility = 'hidden';
-document.getElementById('goed').style.visibility = 'hidden';
-document.getElementById('tekst').style.visibility = 'hidden';
 
+const ant = ['C', 'A', 'B', 'C', 'B', 'D', 'B', 'B', 'B', 'B'];
 
-
-=======
-const ant = ["C", "A", "B", "C", "B", "D", "B", "B", "B", "B"];
 const oant = [
   "Een crash kan optreden door serotonine-uitputting, resulterend in vermoeidheid en prikkelbaarheid. Het kan worden verminderd door gezond eten, hydratatie en rust.",
   "XTC verhoogt de serotonine in de hersenen, wat geluk, empathie en energie kan veroorzaken, maar op lange termijn kan leiden tot stemmingsstoornissen.",
@@ -126,59 +102,35 @@ const oant = [
   "XTC kan uitdroging en oververhitting veroorzaken door verhoogde lichaamstemperatuur en energieverbruik. Dit kan worden verminderd door matig water drinken, regelmatig afkoelen en het vermijden van overmatige fysieke inspanning.",
   "Kortetermijngebruik kan sociale binding versterken, maar op lange termijn kan het problemen in relaties veroorzaken door stemmingsstoornissen en verstoring van sociale en emotionele functies.",
 ];
-const answered = [
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-];
-const pills = [
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-  false,
-];
-document.getElementById("Check").style.visibility = "hidden";
-document.getElementById("fout").style.visibility = "hidden";
-document.getElementById("goed").style.visibility = "hidden";
-document.getElementById("tekst").style.visibility = "hidden";
->>>>>>> Stashed changes
 
+const answered = Array(questions.length).fill(false);
+const pills = Array(questions.length).fill(false);
+
+
+// Hide elements initially
+document.getElementById("vragen").innerHTML = questions[0];
+document.getElementById("inhoudvraag").innerHTML = inhoudv[0];
+document.getElementById("A").value = Av[0];
+document.getElementById("B").value = Bv[0];
+document.getElementById("C").value = Cv[0];
+document.getElementById("D").value = Dv[0];
+document.getElementById('Check').style.visibility = 'hidden';
+document.getElementById('fout').style.visibility = 'hidden';
+document.getElementById('goed').style.visibility = 'hidden';
+document.getElementById('tekst').style.visibility = 'hidden';
+
+// Function to update score
 function updateScore() {
   document.getElementById("score").innerHTML = "<p>score</p>" + score;
 }
 setInterval(updateScore, 100);
 
+// Function to handle user's answer
 function Answer(selectedOption) {
-  //checkt of de vraag al is beantwoord
   if (answered[currentQuestionIndex] === true) {
     document.getElementById("output").innerHTML =
       "<p>U heeft deze vraag al beantwoord u kunt hier geen punten meer voor krijgen</p>";
-  }
-  //checkt of de vraag correct is
-  else if (selectedOption === ant[currentQuestionIndex]) {
+  } else if (selectedOption === ant[currentQuestionIndex]) {
     answered[currentQuestionIndex] = true;
     score++;
     document.getElementById("output").innerHTML =
@@ -188,12 +140,16 @@ function Answer(selectedOption) {
       "<p>Jammer dat is incorrect</p>";
   }
 }
+
+// Function to check the answer
 function check() {
   document.getElementById("Check").style.visibility = "hidden";
   document.getElementById("fout").style.visibility = "visible";
   document.getElementById("goed").style.visibility = "visible";
   document.getElementById("output").innerHTML = oant[openvc];
 }
+
+// Function to handle correct answer
 function goed() {
   if (answered[currentQuestionIndex] === true) {
     document.getElementById("output").innerHTML =
@@ -205,6 +161,8 @@ function goed() {
       "<p>selecteer wat u wilt doen met de pillen</p>";
   }
 }
+
+// Function to handle incorrect answer
 function fout() {
   if (answered[currentQuestionIndex] === true) {
     document.getElementById("output").innerHTML =
@@ -216,7 +174,7 @@ function fout() {
   }
 }
 
-//volgende vraag knop
+// Function to move to the next question
 function next() {
   document.getElementById("output").innerHTML = "";
   if (currentQuestionIndex < questions.length) {
@@ -236,7 +194,7 @@ function next() {
   }
 }
 
-//vorige vraag knop
+// Function to move to the previous question
 function back() {
   openvc--;
   document.getElementById("output").innerHTML = "";
@@ -261,7 +219,8 @@ function back() {
     document.getElementById("Check").style.visibility = "visible";
   }
 }
-//update de vraag,vraaginhoud,antwoorden
+
+// Function to update the question, content, and answers
 function showQuestion(index) {
   if (index >= 0 && index < questions.length) {
     document.getElementById("vragen").innerHTML = questions[index];
@@ -270,25 +229,12 @@ function showQuestion(index) {
     document.getElementById("B").value = Bv[index];
     document.getElementById("C").value = Cv[index];
     document.getElementById("D").value = Dv[index];
-    {
-      if (index >= 0 && index < questions.length) {
-        document.getElementById("vragen").innerHTML = questions[index];
-        document.getElementById("inhoudvraag").innerHTML = inhoudv[index];
-      }
-    }
   }
 }
-<<<<<<< Updated upstream
-showQuestion(currentQuestionIndex);
-=======
-showQuestion(currentQuestionIndex);
-let pilindex = 0;
 
+// Function to adjust pill count
 function pillenaanpassen(toevoegenofwegnemen) {
-  if (
-    answered[currentQuestionIndex] === true &&
-    pills[currentQuestionIndex] === false
-  ) {
+  if (answered[currentQuestionIndex] === true && pills[currentQuestionIndex] === false) {
     if (toevoegenofwegnemen === "plus") {
       if (pilindex < 15) {
         pilindex++;
@@ -303,12 +249,9 @@ function pillenaanpassen(toevoegenofwegnemen) {
     pills[currentQuestionIndex] = true;
   } else {
     if (answered[currentQuestionIndex] === false) {
-      document.getElementById("output").innerHTML =
-        "U heeft de vraag nog niet beantwoord";
+      document.getElementById("output").innerHTML = "U heeft de vraag nog niet beantwoord";
     } else {
-      document.getElementById("output").innerHTML =
-        "U heeft deze actie al uitgevoerd voor het antwoord";
+      document.getElementById("output").innerHTML = "U heeft deze actie al uitgevoerd voor het antwoord";
     }
   }
 }
->>>>>>> Stashed changes
