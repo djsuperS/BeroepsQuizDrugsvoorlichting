@@ -102,7 +102,6 @@ body {
 }
 
 #binder {
-  display: flex;
   text-align: center;
   font-size: 150%;
   border: solid 1px #33A7B7;
@@ -149,4 +148,34 @@ body {
   grid-row-gap: 0px;
   width: 50vw;
   height: 40%;
+}
+
+#plant {
+  position: absolute;
+  top: 30%;
+  right: 14%;
+  /* transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease; */
+  opacity: 1;
+}
+
+#schaar,
+#gieter {
+  position: absolute;
+  top: 70%;
+  width: 160px;
+  /* Aanpassen indien nodig */
+  height: auto;
+  /* Behoud de aspectverhouding */
+
+  cursor: pointer;
+
+}
+
+#gieter {
+  right: 27%;
+
+}
+
+#schaar {
+  right: 12%;
 }

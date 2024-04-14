@@ -35,7 +35,56 @@ document.getElementById('fout').style.visibility = 'hidden';
 document.getElementById('goed').style.visibility = 'hidden';
 document.getElementById('tekst').style.visibility = 'hidden';
 
+let plantImage = document.getElementById('plant');
+plantImage.setAttribute("style", "width:" + changeSize + "px");
+plantImage.setAttribute("style", "height:" + changeSize + "px");
 
+
+// Store the initial position of the shroom image
+var initialLeft = document.getElementById('plant').offsetLeft;
+var initialTop = document.getElementById('plant').offsetTop;
+
+// Store the initial position and dimensions of the shroom image
+var initialLeft = document.getElementById('plant').offsetLeft;
+var initialTop = document.getElementById('plant').offsetTop;
+var initialWidth = document.getElementById('plant').offsetWidth;
+var initialHeight = document.getElementById('plant').offsetHeight;
+
+// Function to handle resizing of the shroom image
+function changeSize(action) {
+    var plantImage = document.getElementById('plant');
+    var currentWidth = parseInt(plantImage.style.width) || plantImage.width;
+    var currentHeight = parseInt(plantImage.style.height) || plantImage.height;
+
+    var newWidth, newHeight;
+
+    // Adjust dimensions based on the action
+    if (action === 'schaar') {
+        newWidth = currentWidth - 20;
+        newHeight = currentHeight - 20;
+    } else if (action === 'gieter') {
+        newWidth = currentWidth + 20;
+        newHeight = currentHeight + 20;
+    }
+
+    // Calculate the new position to keep the image centered
+    var newLeft = initialLeft - (newWidth - initialWidth) / 2;
+    var newTop = initialTop - (newHeight - initialHeight) / 2;
+
+    // Set the new dimensions and position for the shroom image
+    plantImage.style.width = newWidth + 'px';
+    plantImage.style.height = newHeight + 'px';
+    plantImage.style.left = newLeft + 'px';
+    plantImage.style.top = newTop + 'px';
+}
+
+
+
+
+
+
+document.getElementById('schaar').onclick = function () { changeSize('schaar'); };
+document.getElementById('gieter').onclick = function () { changeSize('gieter'); };
 
 
 function updateScore() {
